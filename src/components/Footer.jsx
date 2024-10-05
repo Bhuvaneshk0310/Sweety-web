@@ -8,7 +8,7 @@ const Footer = () => {
     <div className=" bg-black text-white rounded-t-3xl mt-8 md:mt-0">
       <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
         <div className=" w-full md:w-1/4">
-          <h1 className=" font-semibold text-xl pb-4">FoodieWeb</h1>
+          <h1 className=" font-semibold text-xl pb-4">Sweety Web</h1>
           <p className=" text-sm">
             Indulge in a symphony of flavors, where each plate is a canvas for
             culinary excellence.
