@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { BiRestaurant } from "react-icons/bi";
+import logo from "../assets/img/logo.png";
 import Button from "../layouts/Button";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import './Navbar.css';
+
+
+
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -23,9 +27,13 @@ const Navbar = () => {
         <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
           <div className=" flex flex-row items-center cursor-pointer">
             <span>
-              <BiRestaurant size={32} />
+              <img className="nav-img"
+            src={logo} 
+  alt="img" 
+/>
+              
             </span>
-            <h1 className=" text-xl font-semibold">FoodieWeb</h1>
+            <h1 className=" text-xl font-semibold">Sweets</h1>
           </div>
 
           <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
@@ -48,7 +56,7 @@ const Navbar = () => {
                   duration={500}
                   className="hover:text-brightColor transition-all cursor-pointer"
                 >
-                  Dishes
+                  Product
                 </Link>
 
                 <BiChevronDown className="cursor-pointer" size={25} />
@@ -57,46 +65,46 @@ const Navbar = () => {
               <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
                 <li>
                   <Link
-                    to="dishes"
+                    to="Product"
                     spy={true}
                     smooth={true}
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Spicy
+                    Sweet
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="dishes"
+                    to="Product"
                     spy={true}
                     smooth={true}
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Tasty
+                    Cake
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="dishes"
+                    to="Product"
                     spy={true}
                     smooth={true}
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Delicious
+                    Cookies
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="dishes"
+                    to="Product"
                     spy={true}
                     smooth={true}
                     duration={500}
                     className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
                   >
-                    Crispy
+                    Bakery
                   </Link>
                 </li>
               </ul>
@@ -159,14 +167,14 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="dishes"
+            to="Product"
             spy={true}
             smooth={true}
             duration={500}
             className="hover:text-brightColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
-            Dishes
+            Product
           </Link>
           <Link
             to="about"

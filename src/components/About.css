@@ -1,0 +1,10 @@
+/* Example of potential issues to look for */
+.about {
+    background-color: #f0f0f0; /* Make sure the syntax is correct */
+    padding: 10px;            /* Ensure there are no missing semicolons */
+  }
+  
+  img {
+    border-radius: 15px; /* Check for correct property names */
+  }
+  

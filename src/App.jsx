@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
-import Dishes from "./components/Dishes";
+import Product from "./components/Product";
 import Reviews from "./components/Review";
 import Review from "./components/Review";
 
@@ -18,8 +18,8 @@ const App = () => {
           <Home />
         </div>
 
-        <div id="dishes">
-          <Dishes />
+        <div id="Product">
+          <Product />
         </div>
 
         <div id="about">
