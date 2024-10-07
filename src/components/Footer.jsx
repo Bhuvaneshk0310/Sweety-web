@@ -8,14 +8,14 @@ const Footer = () => {
     return (
         <div>
             {/* Newsletter Section */}
-            <div className="newsletter text-center py-12 bg-gray-100">
+            <div className="newsletter text-center py-12 bg-white-100">
                 <h1 className="text-3xl font-semibold mb-3">Get Exclusive Offer on Your Email</h1>
                 <p className="mb-6 text-gray-700">Subscribe to our newsletter and stay updated</p>
                 <div className="flex justify-center">
                     <div className="flex w-3/4 sm:w-1/2 lg:w-2/5">
                         <input
                             type="email"
-                            className="form-input w-full px-4 py-3 rounded-l-lg focus:outline-none"
+                            className="form-input bg-gray-200 w-full px-4 py-3 rounded-l-lg focus:outline-none"
                             placeholder="Your Email"
                             aria-label="Email Address"
                         />
@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="flex flex-col items-center gap-8 w-full mb-8 text-gray-700 text-lg">
-                    <hr className="w-4/5 border-none h-1 rounded bg-gray-300" />
+                    <hr className="w-4/5 border-none h-1 rounded bg-gray-100" />
                     <p>Copyright &copy; 2024 - All rights Reserved.</p>
                 </div>
             </div>

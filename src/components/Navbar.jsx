@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import logo from "../assets/img/logo.png";
@@ -96,17 +98,7 @@ const Navbar = () => {
                     Cookies
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="Product"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Bakery
-                  </Link>
-                </li>
+                
               </ul>
             </div>
 
@@ -139,8 +131,17 @@ const Navbar = () => {
             >
               Reviews
             </Link>
-
-            <Button title="Login" />
+            <Link
+              to="login"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              <Button title="Login" />
+            </Link>
+           
+            
           </nav>
 
           <div className="md:hidden flex items-center">
@@ -207,7 +208,19 @@ const Navbar = () => {
             Reviews
           </Link>
 
-          <Button title="login" />
+         
+          <Link
+            to="login"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className=" hover:text-brightColor transition-all cursor-pointer"
+            onClick={closeMenu}
+          >
+            <Button title="login" />
+          </Link>
+
+
         </div>
       </div>
     </div>

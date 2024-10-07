@@ -4,7 +4,7 @@
     padding: 10px;            /* Ensure there are no missing semicolons */
   }
   
-  .about img {
+  .about-img {
     margin-top: 30px;
     border-radius: 15px; /* Check for correct property names */
   }

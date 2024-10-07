@@ -1,3 +1,6 @@
+
+
+
 import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -5,8 +8,9 @@ import About from "./components/About";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
-import Reviews from "./components/Review";
+
 import Review from "./components/Review";
+import Login from "./components/Login";
 
 const App = () => {
   return (
@@ -32,6 +36,9 @@ const App = () => {
 
         <div id="review">
           <Review />
+        </div>
+        <div id="login">
+          <Login />
         </div>
       </main>
 
