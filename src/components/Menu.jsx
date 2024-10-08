@@ -8,7 +8,7 @@ const Menu = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center lg:px-32 px-5">
       <h1 className=" text-4xl font-semibold text-center lg:pt-8 pt-24 pb-10">
-        Premium Menu
+        Premium Offer
       </h1>
 
       <div className=" flex flex-wrap gap-8 justify-center">

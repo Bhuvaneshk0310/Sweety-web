@@ -119,7 +119,7 @@ const Navbar = () => {
               duration={500}
               className="hover:text-brightColor transition-all cursor-pointer"
             >
-              Menu
+              Offer
             </Link>
 
             <Link
@@ -130,6 +130,15 @@ const Navbar = () => {
               className="hover:text-brightColor transition-all cursor-pointer"
             >
               Reviews
+            </Link>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Contact
             </Link>
             <Link
               to="login"
@@ -195,7 +204,7 @@ const Navbar = () => {
             className="hover:text-brightColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
-            Menu
+            Offer
           </Link>
           <Link
             to="review"

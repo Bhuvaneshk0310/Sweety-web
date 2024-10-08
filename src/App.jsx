@@ -8,9 +8,9 @@ import About from "./components/About";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
-
 import Review from "./components/Review";
 import Login from "./components/Login";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -36,6 +36,9 @@ const App = () => {
 
         <div id="review">
           <Review />
+        </div>
+        <div id="contact">
+          <Contact />
         </div>
         <div id="login">
           <Login />
