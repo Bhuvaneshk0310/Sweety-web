@@ -11,6 +11,8 @@ import Product from "./components/Product";
 import Review from "./components/Review";
 import Login from "./components/Login";
 import Contact from "./components/Contact";
+import Cake from "./components/Cake";
+import Cookies from "./components/Cookies";
 
 const App = () => {
   return (
@@ -24,6 +26,12 @@ const App = () => {
 
         <div id="Product">
           <Product />
+        </div>
+        <div id="Cake">
+          <Cake />
+        </div>
+        <div id="Cookies">
+          <Cookies />
         </div>
 
         <div id="about">

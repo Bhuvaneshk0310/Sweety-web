@@ -78,7 +78,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="Product"
+                    to="Cake"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="Product"
+                    to="Cookies"
                     spy={true}
                     smooth={true}
                     duration={500}
@@ -216,6 +216,15 @@ const Navbar = () => {
           >
             Reviews
           </Link>
+          <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Contact
+            </Link>
 
          
           <Link
