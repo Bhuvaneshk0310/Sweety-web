@@ -1,61 +1,71 @@
-
-
-
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import About from "./components/About";
-import Menu from "./components/Menu";
-import Footer from "./components/Footer";
-import Product from "./components/Product";
-import Review from "./components/Review";
 import Login from "./components/Login";
-import Contact from "./components/Contact";
-import Cake from "./components/Cake";
-import Cookies from "./components/Cookies";
+import Footer from "./components/Footer";
+// Create browser router
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Navbar />
+        <main>
+          <Home />
+        </main>
+<Footer/>
+      </>
+    ),
+  },
+  {
+    path: "/login",
+    element: (
+      <>
+       
+        <main>
+          <Login />
+        </main>
+        <Footer/>
+      </>
+    ),
+  },
+]);
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-
-      <main>
-        <div id="home">
-          <Home />
-        </div>
-
-        <div id="Product">
-          <Product />
-        </div>
-        <div id="Cake">
-          <Cake />
-        </div>
-        <div id="Cookies">
-          <Cookies />
-        </div>
-
-        <div id="about">
-          <About />
-        </div>
-
-        <div id="menu">
-          <Menu />
-        </div>
-
-        <div id="review">
-          <Review />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
-        <div id="login">
-          <Login />
-        </div>
-      </main>
-
-      <Footer />
-    </div>
+    <RouterProvider router={router} />
   );
 };
 
 export default App;
+
+
+// import React from "react";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Navbar from "./components/Navbar";
+// import Home from "./components/Home";
+
+// import Login from "./components/Login";
+
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Navbar />
+
+//       <main>
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+        
+//           <Route path="/login" element={<Login />} />
+//         </Routes>
+//       </main>
+
+//       <Footer />
+//     </Router>
+//   );
+// };
+
+// export default App;
+
