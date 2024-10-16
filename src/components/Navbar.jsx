@@ -1,7 +1,10 @@
+// src/components/Navbar.js
+
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.png";
+import Button from "../layouts/Button";
 import { AiOutlineMenuUnfold, AiOutlineClose } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import './Navbar.css';
@@ -18,89 +21,223 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full">
-      <div className="flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div className="fixed w-full z-50">
+      {/* Navbar Container */}
+      <div className="flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] border-b border-gray-2500
+">
+        {/* Logo and Brand Name */}
         <div className="flex flex-row items-center cursor-pointer">
           <span>
-            <img className="nav-img" src={logo} alt="img" />
+            <img className="nav-img" src={logo} alt="logo" />
           </span>
           <h1 className="text-xl font-semibold">Sweets</h1>
         </div>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
-          <ScrollLink to="Home" spy={true} smooth={true} duration={400} className="hover:text-brightColor transition-all cursor-pointer">
+          <ScrollLink
+            to="Home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70} // Adjust based on navbar height
+            className="hover:text-brightColor transition-all cursor-pointer"
+          >
             Home
           </ScrollLink>
 
           <div className="relative group">
             <div className="flex items-center gap-1">
-              <ScrollLink to="Product" spy={true} smooth={true} duration={400} className="hover:text-brightColor transition-all cursor-pointer">
+              <ScrollLink
+                to="Product"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="hover:text-brightColor transition-all cursor-pointer"
+              >
                 Product
               </ScrollLink>
               <BiChevronDown className="cursor-pointer" size={25} />
             </div>
 
+            {/* Dropdown Menu */}
             <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
               <li>
-                <ScrollLink to="Cake" spy={true} smooth={true} duration={400} className="text-gray-800 hover:text-brightColor transition-all cursor-pointer">
+                <ScrollLink
+                  to="Cake"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
+                >
                   Cake
                 </ScrollLink>
               </li>
               <li>
-                <ScrollLink to="Cookies" spy={true} smooth={true} duration={400} className="text-gray-800 hover:text-brightColor transition-all cursor-pointer">
+                <ScrollLink
+                  to="Cookies"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
+                >
                   Cookies
                 </ScrollLink>
               </li>
             </ul>
           </div>
 
-          <ScrollLink to="About" spy={true} smooth={true} duration={400} className="hover:text-brightColor transition-all cursor-pointer">
+          <ScrollLink
+            to="About"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="hover:text-brightColor transition-all cursor-pointer"
+          >
             About
           </ScrollLink>
 
-          <ScrollLink to="Menu" spy={true} smooth={true} duration={400} className="hover:text-brightColor transition-all cursor-pointer">
-           Offer
+          <ScrollLink
+            to="Menu"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="hover:text-brightColor transition-all cursor-pointer"
+          >
+            Offer
           </ScrollLink>
-          <ScrollLink to="Contact" spy={true} smooth={true} duration={400} className="hover:text-brightColor transition-all cursor-pointer" onClick={closeMenu}>
-          Contact
-        </ScrollLink>
-          <ScrollLink to="Review" spy={true} smooth={true} duration={400} className="hover:text-brightColor transition-all cursor-pointer">
+
+          <ScrollLink
+            to="Contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="hover:text-brightColor transition-all cursor-pointer"
+            onClick={closeMenu}
+          >
+            Contact
+          </ScrollLink>
+
+          <ScrollLink
+            to="Review"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="hover:text-brightColor transition-all cursor-pointer"
+          >
             Reviews
           </ScrollLink>
 
-          <Link to="/login" className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
-            Login
-          </Link>
+          {/* Login Button */}
+          <Link
+          to="/login"
+                >
+           <div className="lg:pl-1">
+            <Button title=" Login" />
+          </div>
+         
+        </Link>
         </nav>
 
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center">
-          {menu ? <AiOutlineClose size={25} onClick={handleChange} /> : <AiOutlineMenuUnfold size={25} onClick={handleChange} />}
+          {menu ? (
+            <AiOutlineClose size={25} onClick={handleChange} />
+          ) : (
+            <AiOutlineMenuUnfold size={25} onClick={handleChange} />
+          )}
         </div>
       </div>
 
-      {/* Mobile menu */}
-      <div className={`${menu ? "translate-x-0" : "-translate-x-full"} lg:hidden flex flex-col absolute bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300`}>
-        <ScrollLink to="Home" spy={true} smooth={true} duration={100} className="hover:text-brightColor transition-all cursor-pointer" onClick={closeMenu}>
+      {/* Mobile Menu */}
+      <div
+        className={`${
+          menu ? "translate-x-0" : "-translate-x-full"
+        } md:hidden flex flex-col absolute bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full transition-transform duration-300`}
+      >
+        <ScrollLink
+          to="Home"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="hover:text-brightColor transition-all cursor-pointer"
+          onClick={closeMenu}
+        >
           Home
         </ScrollLink>
-        <ScrollLink to="Product" spy={true} smooth={true} duration={100} className="hover:text-brightColor transition-all cursor-pointer" onClick={closeMenu}>
+        <ScrollLink
+          to="Product"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="hover:text-brightColor transition-all cursor-pointer"
+          onClick={closeMenu}
+        >
           Product
         </ScrollLink>
-        <ScrollLink to="About" spy={true} smooth={true} duration={100} className="hover:text-brightColor transition-all cursor-pointer" onClick={closeMenu}>
+        <ScrollLink
+          to="About"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="hover:text-brightColor transition-all cursor-pointer"
+          onClick={closeMenu}
+        >
           About
         </ScrollLink>
-        <ScrollLink to="Menu" spy={true} smooth={true} duration={100} className="hover:text-brightColor transition-all cursor-pointer" onClick={closeMenu}>
+        <ScrollLink
+          to="Menu"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="hover:text-brightColor transition-all cursor-pointer"
+          onClick={closeMenu}
+        >
           Offer
         </ScrollLink>
-        <ScrollLink to="Contact" spy={true} smooth={true} duration={100} className="hover:text-brightColor transition-all cursor-pointer" onClick={closeMenu}>
+        <ScrollLink
+          to="Contact"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="hover:text-brightColor transition-all cursor-pointer"
+          onClick={closeMenu}
+        >
           Contact
         </ScrollLink>
-        <ScrollLink to="Review" spy={true} smooth={true} duration={100} className="hover:text-brightColor transition-all cursor-pointer" onClick={closeMenu}>
+        <ScrollLink
+          to="Review"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="hover:text-brightColor transition-all cursor-pointer"
+          onClick={closeMenu}
+        >
           Reviews
         </ScrollLink>
 
-        <Link to="/login" className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600 transition" onClick={closeMenu}>
-          Login
+        {/* Login Button */}
+        <Link
+          to="/login"
+          onClick={closeMenu}
+        >
+           <div className="lg:pl-44">
+            <Button title=" Login" />
+          </div>
+         
         </Link>
       </div>
     </div>

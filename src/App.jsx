@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         <main>
           <Login />
         </main>
-        <Footer/>
+       
       </>
     ),
   },
