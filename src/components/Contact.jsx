@@ -36,7 +36,7 @@ const Contact = () => {
               </ul>
             </div>
 
-            {/* Contact Form */}
+           
             <div className="w-full lg:w-1/2 bg-white rounded-lg shadow-lg p-8 mt-8 lg:mt-0">
               <form id="contact-form" method="POST" className="space-y-6">
                 <input type="hidden" name="form-name" value="contactForm" />

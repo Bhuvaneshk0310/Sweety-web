@@ -11,6 +11,7 @@ import Review from "./Review";
 const Home = () => {
   return (
     <div>
+      <div href="#Home">
       <div className="min-h-screen flex flex-row justify-between items-center lg:px-32 px-5 bg-[url('./assets/img/bb6.jpg')] bg-cover bg-no-repeat">
         <div className="w-full lg:w-2/3 space-y-5">
           <h1 className="text-white font-semibold text-6xl">
@@ -22,6 +23,7 @@ const Home = () => {
           <div className="lg:pl-44">
             <Button title="Order Now" />
           </div>
+        </div>
         </div>
       </div>
       {/* Assign IDs to your components for scrolling */}

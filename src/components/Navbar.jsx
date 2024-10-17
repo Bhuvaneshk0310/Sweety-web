@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full z-50">
       {/* Navbar Container */}
-      <div className="flex flex-row justify-between p-5 md:px-32 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] border-b border-gray-2500
+      <div className="flex flex-row justify-between p-5 md:px-30 px-5 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] border-b border-gray-2500
 ">
         {/* Logo and Brand Name */}
         <div className="flex flex-row items-center cursor-pointer">
@@ -36,7 +36,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
           <ScrollLink
-            to="Home"
+            to="/Home"
             spy={true}
             smooth={true}
             duration={500}
@@ -53,7 +53,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={-70}
+                offset={-50}
                 className="hover:text-brightColor transition-all cursor-pointer"
               >
                 Product
@@ -163,7 +163,7 @@ const Navbar = () => {
         } md:hidden flex flex-col absolute bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full transition-transform duration-300`}
       >
         <ScrollLink
-          to="Home"
+          to="/Home"
           spy={true}
           smooth={true}
           duration={500}
