@@ -1,9 +1,12 @@
+// src/App.jsx
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import Signup from "./components/Signup"; // Import your Signup component
 import Footer from "./components/Footer";
+
 // Create browser router
 const router = createBrowserRouter([
   {
@@ -14,7 +17,7 @@ const router = createBrowserRouter([
         <main>
           <Home />
         </main>
-<Footer/>
+        <Footer />
       </>
     ),
   },
@@ -22,11 +25,19 @@ const router = createBrowserRouter([
     path: "/login",
     element: (
       <>
-       
         <main>
           <Login />
         </main>
-       
+      </>
+    ),
+  },
+  {
+    path: "/signup", // Define the route for the signup page
+    element: (
+      <>
+        <main>
+          <Signup /> {/* Render the Signup component here */}
+        </main>
       </>
     ),
   },
